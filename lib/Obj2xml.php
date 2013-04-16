@@ -57,7 +57,7 @@ class Obj2xml {
 		return $xml->asXML();
 	}
 
-	private function iterateChildren($data,$transacType){
+	static private function iterateChildren($data,$transacType){
 		foreach($data as $key => $value)
 		{
 			if ($value === "REQUIRED"){
@@ -78,7 +78,7 @@ class Obj2xml {
 		}
 	}
 
-	public function getConfig($data)
+	static public function getConfig($data)
 	{
 
 		@$config_array =parse_ini_file('litle_SDK_config.ini');
